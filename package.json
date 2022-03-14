@@ -1,0 +1,20 @@
+{
+  "name": "stream_02",
+  "version": "1.0.0",
+  "description": "Learn about nodejs streams. * [node js streams - everything you need to know](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)",
+  "main": "createbigfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwibawa/stream_02.git"
+  },
+  "author": "Ryan Wibawa <ryan.wibawa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwibawa/stream_02/issues"
+  },
+  "homepage": "https://github.com/rwibawa/stream_02#readme",
+  "type": "module"
+}

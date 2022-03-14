@@ -1,6 +1,7 @@
 # stream_02
 Learn about nodejs streams.
 * [node js streams - everything you need to know](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
+* [Web Streams API](https://nodejs.org/api/webstreams.html)
 
 ## 1. Setup
 ```bash
@@ -140,4 +141,55 @@ fs.createReadStream(file)
   .pipe(reportProgress)
   .pipe(fs.createWriteStream(file.slice(0, -3)))
   .on('finish', () => console.log('Done'));
+```
+
+## 4. Web Streams API
+```bash
+$ nvm use 16.13.0
+$ git init
+
+$ vi server03.js
+```
+
+`package.json`
+```json
+{
+  "type": "module"
+}
+```
+
+```bash
+$ node server03.js 
+(node:54072) ExperimentalWarning: stream/web is an experimental feature. This feature could changea 
+t any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+1037.4095001220703
+2050.895499944687
+3054.0045001506805
+4055.3447999954224
+5064.183300018311
+
+$ node server04.js
+A
+(node:52716) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+$ node server05.js 
+(node:37228) ExperimentalWarning: stream/web is an experimental feature. This feature could changea 
+t any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+1043.9137001037598
+2047.7787001132965
+3054.7079000473022
+4063.8859000205994
+5070.898300170898
+6084.602500200272
+7096.156300067902
+8102.378200054169
+
+$ node server06.js
+(node:63360) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{ value: 1043.735899925232, done: false }
+
 ```
